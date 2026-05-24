@@ -1,0 +1,417 @@
+/* ===== Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ===== Background ===== */
+body {
+    min-height: 100vh;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Container ===== */
+
+/* Login Container */
+.container {
+    width: 380px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 34px 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 22px;
+}
+
+.container h2 .material-icons {
+    font-size: 48px;
+    color: #10b981;
+    margin-bottom: 6px;
+}
+
+/* Labels */
+.container label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* Inputs */
+.container input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.container input:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* Login Button */
+.container button {
+    width: 100%;
+    padding: 14px;
+    background: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.container button:hover {
+    background: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(16, 185, 129, 0.35);
+}
+
+/* Footer Text */
+.container p {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.container p a {
+    color: #10b981;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Headings ===== */
+h2 {
+    text-align: center;
+    color: #1f2933;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 22px;
+}
+
+/* ===== Wallet Card ===== */
+.wallet-card {
+    background: #ecfdf5;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.wallet-label {
+    font-size: 14px;
+    color: #047857;
+}
+
+.wallet-amount {
+    font-size: 34px;
+    font-weight: 700;
+    color: #065f46;
+    margin: 6px 0;
+}
+
+.trust-row {
+    font-size: 12px;
+    color: #065f46;
+}
+
+/* ===== Inputs ===== */
+label {
+    font-size: 13px;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #10b981;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background: #10b981;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #059669;
+}
+
+.secondary {
+    background: #f3f4f6;
+    color: #111827;
+    margin-top: 12px;
+}
+
+.secondary:hover {
+    background: #e5e7eb;
+}
+
+/* ===== Logout ===== */
+.logout-link {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+/* ===== Transaction History ===== */
+
+.txn-list {
+    margin-top: 16px;
+}
+
+.txn-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.txn-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.txn-type {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.txn-type.sent {
+    color: #dc2626;
+}
+
+.txn-type.received {
+    color: #059669;
+}
+
+.txn-date {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.txn-right {
+    text-align: right;
+}
+
+.txn-amount {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.txn-amount.minus {
+    color: #dc2626;
+}
+
+.txn-amount.plus {
+    color: #059669;
+}
+
+.txn-location {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+
+.txn-status {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.txn-status.APPROVED {
+    color: #059669;
+}
+
+.txn-status.BLOCKED {
+    color: #dc2626;
+}
+
+
+.info-box {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 18px;
+}
+
+.info-box ul {
+    margin-left: 18px;
+    margin-top: 6px;
+}
+
+/* ===== PAYMENT RESULT PAGE ===== */
+
+.payment-page {
+    min-height: 100vh;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Icon Container */
+.status-icon {
+    margin-bottom: 20px;
+    animation: popIn 0.5s ease forwards;
+}
+
+.status-icon span {
+    font-size: 90px;
+}
+
+/* Success */
+.status-icon.success span {
+    color: #16a34a;
+}
+
+/* Failed */
+.status-icon.failed span {
+    color: #dc2626;
+}
+
+/* Message */
+.payment-page h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.status-msg {
+    font-size: 15px;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.risk-note {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 26px;
+}
+
+/* Animation */
+@keyframes popIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+/* ===== APP LAYOUT (NON-CENTERED) ===== */
+
+.app {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Header spacing */
+.app h2 {
+    margin-top: 10px;
+}
+
+/* Transaction list full width */
+.txn-list {
+    margin-top: 20px;
+}
+
+/* Make cards feel like list items */
+.txn-card {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+/* Mobile-like scrolling */
+body {
+    background: #f8fafc;
+}
+
